@@ -1,11 +1,13 @@
 import * as React from "react"
+import Home from "./Home/HomeIndex"
+import Navbar from "../components/Navbar"
 
 
 const IndexPage = () => {
-  return (
-    <div className="container mx-auto text-center">
-      Hello
-    </div>
+  return (<>
+    <Navbar />
+    <Home />
+  </>
   )
 }
 
