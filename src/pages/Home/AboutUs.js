@@ -18,7 +18,7 @@ function AboutUs() {
        `
     }
 
-    return ( <div className="py-[20px] pt-[50px]">
+    return ( <div className="pt-[100px] py-[50px]">
         <div className="container mx-auto">
             <div className="text-[40px] font-bold text-red-800">
             <MarkdownView  markdown={data?.title} />

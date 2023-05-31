@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo from './assets/Logo.webp'
+import Logo from '../assets/Logo.webp'
 
 const navlinks = [
     {
@@ -35,8 +35,11 @@ function Navbar() {
         <div className="container mx-auto">
 
             <div className="flex justify-between items-center">
-                <div className="nav">
+                <div className="nav flex items-center">
                     <img alt="" src={Logo} className="h-fit" />
+                    <div className="text-[30px] ml-[20px] text-sky-900">
+                        LOGO
+                    </div>
                 </div>
                 <div className="nav-menu ">
                     {navlinks.map(item => {
