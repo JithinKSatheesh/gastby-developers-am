@@ -4,7 +4,7 @@ import ContactCard from '../../components/ContactCard';
 import ContactAddress from '../../components/ContactAddress';
 
 
-function ContactUs() {
+function Contact() {
 
     const data = {
         title: "Contact us",
@@ -31,4 +31,4 @@ function ContactUs() {
     </div> );
 }
 
-export default ContactUs;
+export default Contact;
