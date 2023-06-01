@@ -6,6 +6,7 @@ import Partners from "./Partners";
 import AssociationMembers from "./AssociationMembers";
 import News from "./News";
 import Footer from "../../components/Footer";
+import ContactUs from "./Contactus";
 
 function HomeIndex() {
     return (<>
@@ -15,6 +16,7 @@ function HomeIndex() {
     <AssociationMembers />
     <Partners />
     <News />
+    <ContactUs />
     <Footer />
     </>
     );

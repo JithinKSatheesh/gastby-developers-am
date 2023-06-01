@@ -1,8 +1,11 @@
 import React from "react";
 
 import MarkdownView from 'react-showdown';
-import UserCard from "../../components/UserCard";
+// import UserCard from "../../components/UserCard";
 import Secondary from "../../components/Button/secondary";
+import CompanyCard from "../../components/CompanyCard";
+
+
 
 
 function AssociationMembers() {
@@ -34,6 +37,12 @@ function AssociationMembers() {
                 name: "SOme name",
                 position: "position"
             },
+            {
+                id: 5,
+                photo: '',
+                name: "SOme name",
+                position: "position"
+            },
         ]
     }
 
@@ -45,11 +54,12 @@ function AssociationMembers() {
                 <MarkdownView markdown={data?.title} />
             </div>
             <div className="pt-[50px]">
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-[30px]">
+                {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-[30px]">
                     {data?.members?.map(item =>
-                        <UserCard key={item.id} item={item} />
+                        <CompanyCard key={item.id} item={item} />
                     )}
-                </div>
+                </div> */}
+                    <CompanyCard items={data?.members} />
                 <div className="pt-[50px]">
                     <Secondary className="max-w-[250px] mx-auto" label="View more" />
                 </div>
