@@ -44,12 +44,16 @@ function Partners() {
             </div>
             <div className="content pt-[50px]">
             <div className="grid grid-cols-2 sm:grid-cols-6 gap-[10px]">
-                    {data?.partners?.map(item =>
+                    {/* {data?.partners?.map(item =>
                        <div>
 
                         <PartnerCard  item={item}/>
                        </div>
-                    )}
+                    )} */}
+                </div>
+                <div className="">
+                <PartnerCard  items={data?.partners}/>
+
                 </div>
             </div>
 

@@ -35,6 +35,24 @@ function AssociationCouncil() {
                 name: "SOme name",
                 position: "position"
             },
+            {
+                id: 5,
+                photo: '',
+                name: "SOme name",
+                position: "position"
+            },
+            {
+                id: 6,
+                photo: '',
+                name: "SOme name",
+                position: "position"
+            },
+            {
+                id: 7,
+                photo: '',
+                name: "SOme name",
+                position: "position"
+            },
         ]
     }
 
@@ -46,10 +64,13 @@ function AssociationCouncil() {
                 <MarkdownView markdown={data?.title} />
             </div>
             <div className="pt-[50px]">
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-[30px]">
+                {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-[30px]">
                     {data?.members?.map(item =>
                         <UserCard key={item.id} item={item} />
                     )}
+                </div> */}
+                <div className="">
+                    <UserCard items={data?.members} />
                 </div>
                     <div className="pt-[50px] w-full ">
                         <Secondary className="max-w-[250px] mx-auto" label="View more" />

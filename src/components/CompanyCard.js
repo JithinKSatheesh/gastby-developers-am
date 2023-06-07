@@ -8,7 +8,7 @@ import 'swiper/css/bundle';
 
 function CompanyCard(props) {
 
-    const {  items = {} } = props
+    const { items = {} } = props
 
     const swiperRef = useRef(null);
     SwiperCore.use([Autoplay, Navigation]);
@@ -61,14 +61,33 @@ function CompanyCard(props) {
         </div>)
     }
 
-    return (<div>
-        <div className="overflow-hidden  " >
-            {items.length > 0 &&
-                <Swiper {...params} ref={swiperRef}>
-                    {items.map(CompanyBox)}
+    const NextIcon = (props) => {
+        return (
+            <div {...props} className="cursor-pointer bg-red-800 py-[20px] px-[5px] rounded-md">
+            <svg  width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z" /></svg>
+            </div>
+        )
+    }
 
-                </Swiper>
-            }
+    return (<div>
+        <div className="desktop  relative">
+
+            <div className="container mx-auto px-[10px] h-full w-full absolute ">
+                <div className="absolute left-0 top-[calc(50%-30px)]  -translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()}  /> </div>
+                <div className="absolute right-0  top-[calc(50%-30px)]  translate-x-[60px]"> <NextIcon onClick={() => goNext()}  /> </div>
+            </div>
+            <div className="container mx-auto">
+
+            <div className=" overflow-hidden  " >
+
+                {items.length > 0 &&
+                    <Swiper {...params} ref={swiperRef}>
+                        {items.map(CompanyBox)}
+
+                    </Swiper>
+                }
+            </div>
+                </div>
         </div>
     </div>);
 }

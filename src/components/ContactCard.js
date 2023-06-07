@@ -41,7 +41,7 @@ function ContactCard(props) {
     
 
     return ( <div className={className}>
-        <div className="bg-white rounded-xl p-[20px] ">
+        <div className="_bg-white _rounded-xl _p-[20px] ">
             {
                 textFieldList?.map(item => {
                     return(<TextField key={item.id} item={item} handlechange={handlechange} value={value} />)
