@@ -87,6 +87,7 @@ function UserCard(props) {
 }
 
 export const UserBox = (item) => {
+    
     return (<div key={item?.id} className="max-w-[250px]_ bg-white rounded-xl p-[20px]" >
         <div className="photo mx-auto rounded-full overflow-hidden">
             <img src={UserIcon} alt="" className="w-full" />

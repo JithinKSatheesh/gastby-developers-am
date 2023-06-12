@@ -48,18 +48,7 @@ function CompanyCard(props) {
     }
 
 
-    const CompanyBox = (item) => {
-        return (<div key={item.id} className={"mx-auto py-[10px]"}>
-            <div className=" min-w-[300px] p-2 rounded-xl shadow">
-                <div className="bg-sky-100 min-h-[200px]">
-                    <img src={""} alt="" />
-                </div>
-                <div className="py-[10px] text-center">
-                    {item.name}
-                </div>
-            </div>
-        </div>)
-    }
+    
 
     const NextIcon = (props) => {
         return (
@@ -90,6 +79,19 @@ function CompanyCard(props) {
                 </div>
         </div>
     </div>);
+}
+
+export const CompanyBox = (item) => {
+    return (<div key={item.id} className={"mx-auto py-[10px]"}>
+        <div className=" min-w-[300px] p-2 rounded-xl shadow">
+            <div className="bg-sky-100 min-h-[200px]">
+                <img src={""} alt="" />
+            </div>
+            <div className="py-[10px] text-center">
+                {item.name}
+            </div>
+        </div>
+    </div>)
 }
 
 export default CompanyCard;

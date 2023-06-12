@@ -1,6 +1,7 @@
 import React from "react";
 
 import Logo from '../assets/Logo.webp'
+import { Link } from "gatsby";
 
 const navlinks = [
     {
@@ -8,15 +9,15 @@ const navlinks = [
         lable : "Home",
         link : "/",
     },
-    {
-        id:2,
-        lable : "About us",
-        link : "/",
-    },
+    // {
+    //     id:2,
+    //     lable : "About us",
+    //     link : "/",
+    // },
     {
         id:3,
         lable : "Association Council",
-        link : "/",
+        link : "/associationCouncil",
     },
     {
         id:4,
@@ -43,7 +44,13 @@ function Navbar() {
                 </div>
                 <div className="nav-menu ">
                     {navlinks.map(item => {
-                        return(<div key={item.id} className="inline-block ml-[20px]">{item.lable}</div>)
+                        return(<Link 
+                            key={item.id} 
+                            className="inline-block ml-[20px]"
+                            to={item.link}
+                            >
+                                {item.lable}
+                            </Link>)
                     })}
                 </div>
             </div>
