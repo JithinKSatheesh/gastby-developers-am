@@ -1,6 +1,6 @@
 import React from 'react';
 import MarkdownView from "react-showdown";
-import { UserBox } from "../../components/UserCard"
+import { PartnerBox } from "../../components/PartnerCard"
 
 import Popup from '../../components/Popup';
 import { useState } from 'react';
@@ -9,7 +9,7 @@ import PopupContent from './PopupContent';
 function Content(props) {
 
     const data = {
-        title: "Association Council",
+        title: "Our partners",
         members: [
             {
                 id: 1,
@@ -54,13 +54,14 @@ function Content(props) {
                     <   MarkdownView markdown={data?.title} />
                 </div>
                 <div className="pt-[50px]">
-                    <div className="grid gird-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+                    <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
                         {data?.members?.map((item,index) => { return (
                             <div 
                                 key={item.id}
                                 onClick={() => setSelectedItem(item)}
+                                className='shadow rounded-xl mx-auto max-w-[300px]'
                                 >
-                                {UserBox(item)}
+                                {PartnerBox(item)}
                             </div>
                         ) })}
                     </div>

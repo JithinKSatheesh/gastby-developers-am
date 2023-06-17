@@ -22,13 +22,13 @@ function Contact() {
             <div className="container mx-auto">
                 <div className="content ">
                     <div className="flex flex-wrap">
-                        <div className=" bg-white rounded-xl p-[20px]">
+                        <div className="w-full sm:w-fit bg-white rounded-xl p-[20px]">
 
-                            <div className="text-[40px] font-bold text-red-800">
+                            <div className="text-[20px] sm:text-[40px] text-center sm:text-left text-center sm:text-left font-bold text-red-800">
 
                                 <MarkdownView markdown={data?.title} />
                             </div>
-                            <div className="py-[20px]">
+                            <div className="py-[20px] ">
 
 
                             <ContactCard className="w-full sm:w-fit sm:min-w-[300px] lg:min-w-[450px]" />

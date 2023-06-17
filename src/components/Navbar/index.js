@@ -4,11 +4,11 @@ import Logo from '../assets/Logo.webp'
 import { Link } from "gatsby";
 
 const navlinks = [
-    {
-        id:1,
-        lable : "Home",
-        link : "/",
-    },
+    // {
+    //     id:1,
+    //     lable : "Home",
+    //     link : "/",
+    // },
     // {
     //     id:2,
     //     lable : "About us",
@@ -22,12 +22,22 @@ const navlinks = [
     {
         id:4,
         lable : "Association Members",
-        link : "/",
+        link : "/associationMembers",
     },
     {
         id:5,
         lable : "Our partners",
-        link : "/",
+        link : "/OurPartners",
+    },
+    {
+        id:5,
+        lable : "News",
+        link : "/news",
+    },
+    {
+        id:5,
+        lable : "Useful links",
+        link : "/usefullLinks",
     },
 ]
 
@@ -36,22 +46,41 @@ function Navbar() {
         <div className="container mx-auto">
 
             <div className="flex justify-between items-center">
+                <div>
+                <Link to="/">
                 <div className="nav flex items-center">
                     <img alt="" src={Logo} className="h-fit" />
-                    <div className="text-[30px] ml-[20px] text-sky-900">
-                        LOGO
+                    <div className="text-[10px] ml-[20px] text-sky-900 font-bold">
+                    ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br/>ԱՍՈՑԻԱՑԻԱ
                     </div>
                 </div>
-                <div className="nav-menu ">
+                </Link>
+                </div>
+                <div className="nav-menu hidden lg:block">
                     {navlinks.map(item => {
                         return(<Link 
                             key={item.id} 
                             className="inline-block ml-[20px]"
                             to={item.link}
+                            activeClassName="text-red-800  font-bold"
                             >
                                 {item.lable}
                             </Link>)
                     })}
+                </div>
+                <div className="block lg:hidden">
+                    <div className="w-fit cursor-pointer">
+
+                    <svg 
+                        clip-rule="evenodd" 
+                        fill-rule="evenodd" 
+                        stroke-linejoin="round" 
+                        stroke-miterlimit="2" 
+                        viewBox="0 0 24 24" 
+                        className="h-[30px] w-[30px]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        ><path d="m22 16.75c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
+                    </div>
                 </div>
             </div>
         </div>

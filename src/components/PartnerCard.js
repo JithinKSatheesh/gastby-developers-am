@@ -30,12 +30,12 @@ function PartnerCard(props) {
     };
 
     const params = {
-        slidesPerView: 4,
+        slidesPerView: 1,
         // centeredSlides: true,
         // slidesPerView: 3,
         loop: true,
         observer: true,
-        spaceBetween: 20,
+        spaceBetween: 250,
         on: {
             // realIndexChange: (swiper) => setImageIndex(swiper.realIndex)
         },
@@ -44,15 +44,22 @@ function PartnerCard(props) {
             disableOnInteraction: false
         },
         breakpoints: {
-            550: {
+            700: {
+                slidesPerView:3,
+                spaceBetween: 20,
+
+            },
+            1000: {
                 slidesPerView: 4,
-            }
+                spaceBetween: 20,
+
+            },
         }
 
     }
 
 
-    
+
 
     const NextIcon = (props) => {
         return (
@@ -66,9 +73,9 @@ function PartnerCard(props) {
         <div className="">
             <div className="desktop  relative">
 
-                <div className="container mx-auto px-[10px] h-full w-full absolute ">
-                    <div className="absolute left-0 top-[calc(50%-30px)]  -translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
-                    <div className="absolute right-0  top-[calc(50%-30px)]  translate-x-[60px]"> <NextIcon onClick={() => goNext()} /> </div>
+                <div className="container mx-auto px-[10px] h-full w-full absolute z-[20] ">
+                    <div className="absolute left-0 top-[calc(50%-30px)] -translate-x-[10px]  sm:-translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
+                    <div className="absolute right-0  top-[calc(50%-30px)] translate-x-[10px]  sm:translate-x-[60px] "> <NextIcon onClick={() => goNext()} /> </div>
                 </div>
                 <div className=" mx-auto">
 
@@ -88,17 +95,22 @@ function PartnerCard(props) {
 
 }
 
-export const PartnerBox = (item) => {
+export const PartnerBox = (item, index) => {
 
 
-    return (<div className=" rounded-xl p-[10px] bg-white" >
-        <div className="photo mx-auto  overflow-hidden w-full ">
-            <img src={CompanyIcon} alt="" className="w-full mx-auto" />
+    return (<div
+        key={item?.id}
+        className="px-[20px] sm:px-0"
+        >
+        <div className=" rounded-xl p-[10px] bg-white" >
+            <div className="photo mx-auto  overflow-hidden w-full ">
+                <img src={CompanyIcon} alt="" className="w-full mx-auto" />
+            </div>
+            <div className="text-[16px] text-slate-500 text-center pt-[20px]">
+                {item.name}
+            </div>
+
         </div>
-        <div className="text-[16px] text-slate-500 text-center pt-[20px]">
-            {item.name}
-        </div>
-
     </div>)
 }
 

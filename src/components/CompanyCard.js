@@ -26,12 +26,12 @@ function CompanyCard(props) {
     };
 
     const params = {
-        slidesPerView: 3,
+        slidesPerView: 1,
         centeredSlides: true,
         // slidesPerView: 3,
         loop: true,
         observer: true,
-        spaceBetween: 20,
+        spaceBetween: 100,
         on: {
             // realIndexChange: (swiper) => setImageIndex(swiper.realIndex)
         },
@@ -40,9 +40,16 @@ function CompanyCard(props) {
             disableOnInteraction: false
         },
         breakpoints: {
-            550: {
+            700: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+
+            },
+            1000: {
                 slidesPerView: 3,
-            }
+                spaceBetween: 20,
+
+            },
         }
 
     }
@@ -61,9 +68,9 @@ function CompanyCard(props) {
     return (<div>
         <div className="desktop  relative">
 
-            <div className="container mx-auto px-[10px] h-full w-full absolute ">
-                <div className="absolute left-0 top-[calc(50%-30px)]  -translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()}  /> </div>
-                <div className="absolute right-0  top-[calc(50%-30px)]  translate-x-[60px]"> <NextIcon onClick={() => goNext()}  /> </div>
+            <div className="container mx-auto px-[10px] h-full w-full absolute z-[20] ">
+                <div className="absolute left-0 top-[calc(50%-30px)] -translate-x-[10px]  sm:-translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
+                <div className="absolute right-0  top-[calc(50%-30px)] translate-x-[10px]  sm:translate-x-[60px] "> <NextIcon onClick={() => goNext()} /> </div>
             </div>
             <div className="container mx-auto">
 
@@ -82,8 +89,8 @@ function CompanyCard(props) {
 }
 
 export const CompanyBox = (item) => {
-    return (<div key={item.id} className={"mx-auto py-[10px]"}>
-        <div className=" min-w-[300px] p-2 rounded-xl shadow">
+    return (<div key={item.id} className={"mx-auto py-[10px] "}>
+        <div className="max-w-[300px] sm:max-w-full mx-auto w-full p-2 rounded-xl shadow">
             <div className="bg-sky-100 min-h-[200px]">
                 <img src={""} alt="" />
             </div>

@@ -43,6 +43,18 @@ function AssociationMembers() {
                 name: "SOme name",
                 position: "position"
             },
+            {
+                id: 6,
+                photo: '',
+                name: "SOme name",
+                position: "position"
+            },
+            {
+                id: 7,
+                photo: '',
+                name: "SOme name",
+                position: "position"
+            },
         ]
     }
 
@@ -50,7 +62,7 @@ function AssociationMembers() {
 
     return (<div className="py-[50px] bg-white">
         <div className="container mx-auto">
-            <div className="text-[40px] font-bold text-red-800">
+            <div className="text-[24px] sm:text-[40px]  text-center sm:text-left font-bold text-red-800">
                 <MarkdownView markdown={data?.title} />
             </div>
             <div className="pt-[50px]">

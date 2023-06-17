@@ -37,9 +37,9 @@ function Partners() {
         ]
     }
 
-    return (<div className="pt-[100px] py-[50px] bg-slate-100">
+    return (<div className="pt-[50px] sm:pt-[100px] py-[50px] bg-slate-100">
         <div className="container mx-auto">
-            <div className="text-[40px] font-bold text-red-800">
+            <div className="text-[24px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
                 <MarkdownView markdown={data?.title} />
             </div>
             <div className="content pt-[50px]">

@@ -29,12 +29,12 @@ function UserCard(props) {
     };
 
     const params = {
-        slidesPerView: 4,
+        slidesPerView: 1,
         // centeredSlides: true,
         // slidesPerView: 3,
         loop: true,
         observer: true,
-        spaceBetween: 20,
+        spaceBetween: 100,
         on: {
             // realIndexChange: (swiper) => setImageIndex(swiper.realIndex)
         },
@@ -43,8 +43,9 @@ function UserCard(props) {
             disableOnInteraction: false
         },
         breakpoints: {
-            550: {
+            700: {
                 slidesPerView: 4,
+                spaceBetween: 20,
             }
         }
 
@@ -65,9 +66,9 @@ function UserCard(props) {
         <div className="">
             <div className="desktop  relative">
 
-                <div className="container mx-auto px-[10px] h-full w-full absolute ">
-                    <div className="absolute left-0 top-[calc(50%-30px)]  -translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
-                    <div className="absolute right-0  top-[calc(50%-30px)]  translate-x-[60px]"> <NextIcon onClick={() => goNext()} /> </div>
+                <div className="container mx-auto px-[10px] h-full w-full absolute z-[20] ">
+                    <div className="absolute left-0 top-[calc(50%-30px)] -translate-x-[10px]  sm:-translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
+                    <div className="absolute right-0  top-[calc(50%-30px)] translate-x-[10px]  sm:translate-x-[60px] "> <NextIcon onClick={() => goNext()} /> </div>
                 </div>
                 <div className=" mx-auto">
 
@@ -89,7 +90,7 @@ function UserCard(props) {
 export const UserBox = (item) => {
     
     return (<div key={item?.id} className="max-w-[250px]_ bg-white rounded-xl p-[20px]" >
-        <div className="photo mx-auto rounded-full overflow-hidden">
+        <div className="max-w-[200px] lg:max-w-fit photo mx-auto rounded-full overflow-hidden">
             <img src={UserIcon} alt="" className="w-full" />
         </div>
         <div className="text-[20px] text-center pt-[20px]">

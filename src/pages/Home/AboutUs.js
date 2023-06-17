@@ -18,17 +18,17 @@ function AboutUs() {
        `
     }
 
-    return ( <div className="pt-[100px] py-[50px]">
+    return ( <div className="pt-[50px] sm:pt-[100px] py-[50px]">
         <div className="container mx-auto">
-            <div className="text-[40px] font-bold text-red-800">
+            <div className="text-[24px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
             <MarkdownView  markdown={data?.title} />
             </div>
-            <div className="content pt-[50px]">
+            <div className="content pt-[50px] sm:pt-[50px]">
                 <div className="flex flex-wrap justify-between">
                     <div className="w-[1/2]">
-                        <img src={AboutImage} className="max-w-[500px] rounded-xl" alt="" />
+                        <img src={AboutImage} className="w-full sm:max-w-[500px] rounded-xl" alt="" />
                     </div>
-                    <div className="w-1/2 max-w-fit overflow-hidden">
+                    <div className="w-full sm:w-1/2 pt-[50px] sm:pt-[0px] max-w-fit overflow-hidden">
                         <MarkdownView  markdown={data?.content}/>
                     </div>
                 </div>

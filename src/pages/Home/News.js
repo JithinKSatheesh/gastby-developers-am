@@ -2,7 +2,7 @@ import React from "react";
 
 import MarkdownView from 'react-showdown';
 import Secondary from "../../components/Button/secondary";
-import NewsCard from "../../components/NewsCard";
+import {NewsBox} from "../../components/NewsCard";
 
 
 function News() {
@@ -41,15 +41,16 @@ function News() {
 
     return (<div className="py-[50px] bg-white">
         <div className="container mx-auto">
-            <div className="text-[40px] font-bold text-red-800">
+            <div className="text-[24px] sm:text-[40px] text-center sm:text-left text-[40px] font-bold text-red-800">
                 <MarkdownView markdown={data?.title} />
             </div>
             <div className="pt-[50px]">
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-[30px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
                     {data?.members?.map(item =>
-                        <NewsCard key={item.id} item={item} />
+                        <NewsBox key={item.id} item={item} />
                     )}
                 </div>
+                {/* <NewsCard items={data?.members} /> */}
                 <div className="pt-[50px]">
                     <Secondary className="max-w-[250px] mx-auto" label="View more" />
                 </div>

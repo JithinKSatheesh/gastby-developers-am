@@ -21,10 +21,10 @@ function HeroSection() {
             
             <div className="w-full h-screen flex flex-col items-center justify-center backdrop-blur-sm bg-white/10">
         <div className="container mx-auto">
-                <div className="subhead text-[30px] text-red-800">
+                <div className="subhead text-[18px] sm:text-[30px] text-red-800">
                     <MarkdownView  markdown={data.subhead} />
                 </div>
-                <div className="hero-text text-[50px] py-[10px]">
+                <div className="hero-text text-[24px] sm:text-[50px] py-[10px]">
                     <MarkdownView  markdown={data.herotext} />
                 </div>
                 <div className="py-[20px]">

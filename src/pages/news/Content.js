@@ -1,45 +1,45 @@
 import React from 'react';
 import MarkdownView from "react-showdown";
-import { UserBox } from "../../components/UserCard"
 
 import Popup from '../../components/Popup';
 import { useState } from 'react';
 import PopupContent from './PopupContent';
+import { NewsBox } from '../../components/NewsCard';
 
 function Content(props) {
 
     const data = {
-        title: "Association Council",
+        title: "News",
         members: [
             {
                 id: 1,
                 photo: '',
-                name: "Sample Name",
-                position: "position"
+                title: "Sample title",
+                description: "description"
             },
             {
                 id: 2,
                 photo: '',
-                name: "SOme name",
-                position: "position"
+                title: "SOme title",
+                description: "description"
             },
             {
                 id: 3,
                 photo: '',
-                name: "SOme name",
-                position: "position"
+                title: "SOme title",
+                description: "description"
             },
             {
                 id: 4,
                 photo: '',
-                name: "SOme name",
-                position: "position"
+                title: "SOme title",
+                description: "description"
             },
             {
                 id: 5,
                 photo: '',
-                name: "SOme name",
-                position: "position"
+                title: "SOme title",
+                description: "description"
             },
         ]
 
@@ -54,13 +54,14 @@ function Content(props) {
                     <   MarkdownView markdown={data?.title} />
                 </div>
                 <div className="pt-[50px]">
-                    <div className="grid gird-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
                         {data?.members?.map((item,index) => { return (
                             <div 
                                 key={item.id}
                                 onClick={() => setSelectedItem(item)}
                                 >
-                                {UserBox(item)}
+                                {/* {NewsBox(item)} */}
+                                <NewsBox  item={item} />
                             </div>
                         ) })}
                     </div>
