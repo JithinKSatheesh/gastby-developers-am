@@ -7,7 +7,14 @@ module.exports = {
   theme: {
     extend: {},
     container: {
-      padding: '10px',
+      padding: {
+        DEFAULT : "10px",
+        sm: '20px',
+        md:"20px",
+        lg: '50px',
+        xl: '50px',
+        '2xl' : '50px',
+      },
     },
   },
   plugins: [],

@@ -5,6 +5,7 @@ import { PartnerBox } from "../../components/PartnerCard"
 import Popup from '../../components/Popup';
 import { useState } from 'react';
 import PopupContent from './PopupContent';
+// import { Link } from 'gatsby';
 
 function Content(props) {
 
@@ -20,25 +21,25 @@ function Content(props) {
             {
                 id: 2,
                 photo: '',
-                name: "SOme name",
+                name: "Sample name",
                 position: "position"
             },
             {
                 id: 3,
                 photo: '',
-                name: "SOme name",
+                name: "Sample name",
                 position: "position"
             },
             {
                 id: 4,
                 photo: '',
-                name: "SOme name",
+                name: "Sample name",
                 position: "position"
             },
             {
                 id: 5,
                 photo: '',
-                name: "SOme name",
+                name: "Sample name",
                 position: "position"
             },
         ]
@@ -51,7 +52,12 @@ function Content(props) {
         <div className="pt-[150px] py-[50px]">
             <div className="container mx-auto">
                 <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
-                    <   MarkdownView markdown={data?.title} />
+                    <div className="flex justify-between">
+                        <div className="">
+                            <MarkdownView markdown={data?.title} />
+                        </div>
+                       
+                    </div>
                 </div>
                 <div className="pt-[50px]">
                     <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
@@ -59,7 +65,7 @@ function Content(props) {
                             <div 
                                 key={item.id}
                                 onClick={() => setSelectedItem(item)}
-                                className='shadow rounded-xl mx-auto max-w-[300px]'
+                                className='shadow rounded-xl mx-auto max-w-[300px] cursor-pointer  hover:shadow-red-200 hover:shadow-md'
                                 >
                                 {PartnerBox(item)}
                             </div>

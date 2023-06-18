@@ -90,7 +90,7 @@ function CompanyCard(props) {
 
 export const CompanyBox = (item) => {
     return (<div key={item.id} className={"mx-auto py-[10px] "}>
-        <div className="max-w-[300px] sm:max-w-full mx-auto w-full p-2 rounded-xl shadow">
+        <div className="max-w-[300px] sm:max-w-full mx-auto w-full p-2 rounded-xl cursor-pointer shadow hover:shadow-red-200 hover:shadow-md">
             <div className="bg-sky-100 min-h-[200px]">
                 <img src={""} alt="" />
             </div>

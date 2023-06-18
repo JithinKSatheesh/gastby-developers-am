@@ -112,7 +112,7 @@ function Content() {
                         return(
                         <a href=""  key={item?.id}>
 
-                        <div className='flex items-center mb-[10px] p-[10px] shadow border-2 border- rounded-xl w-full sm:max-w-[50%]'>
+                        <div className='flex items-center mb-[10px] p-[10px] shadow border-2 border- rounded-lg w-full sm:max-w-[50%]'>
                             <div className='mr-[10px]' > <IconPdf /></div>
                             <div className='mr-[10px]'>{item?.label}</div>
                         </div>

@@ -20,25 +20,25 @@ function Content(props) {
             {
                 id: 2,
                 photo: '',
-                name: "SOme name",
+                name: "Sample name",
                 position: "position"
             },
             {
                 id: 3,
                 photo: '',
-                name: "SOme name",
+                name: "Sample name",
                 position: "position"
             },
             {
                 id: 4,
                 photo: '',
-                name: "SOme name",
+                name: "Sample name",
                 position: "position"
             },
             {
                 id: 5,
                 photo: '',
-                name: "SOme name",
+                name: "Sample name",
                 position: "position"
             },
         ]
@@ -59,6 +59,7 @@ function Content(props) {
                             <div 
                                 key={item.id}
                                 onClick={() => setSelectedItem(item)}
+
                                 >
                                 {CompanyBox(item)}
                             </div>

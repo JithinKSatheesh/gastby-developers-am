@@ -20,25 +20,25 @@ function Content(props) {
             {
                 id: 2,
                 photo: '',
-                title: "SOme title",
+                title: "Sample title",
                 description: "description"
             },
             {
                 id: 3,
                 photo: '',
-                title: "SOme title",
+                title: "Sample title",
                 description: "description"
             },
             {
                 id: 4,
                 photo: '',
-                title: "SOme title",
+                title: "Sample title",
                 description: "description"
             },
             {
                 id: 5,
                 photo: '',
-                title: "SOme title",
+                title: "Sample title",
                 description: "description"
             },
         ]
@@ -68,7 +68,7 @@ function Content(props) {
                 </div>
             </div>
         </div>
-        <Popup 
+        {/* <Popup 
             onClose={() => setSelectedItem(null)} 
             isOpen={selectedItem}
             heading={selectedItem?.name || ""}
@@ -76,7 +76,7 @@ function Content(props) {
                 {
                    selectedItem && <PopupContent item={selectedItem} /> 
                 }
-        </Popup>
+        </Popup> */}
     </div>);
 }
 
